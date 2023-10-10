@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const greeting = "Святухин Д.А.";
 
-  //console.log('This is App ');
+  console.log('This is App ');
   return (
     <div className="App">
      <header className="App-header">
