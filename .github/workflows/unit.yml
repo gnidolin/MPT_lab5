@@ -2,7 +2,7 @@ name: unit
 on:
  pull_request:
   branches:
-   - '*'
+   - 'main'
 jobs:
  unit:
   runs-on: ubuntu-latest
