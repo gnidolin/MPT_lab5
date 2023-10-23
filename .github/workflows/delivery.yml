@@ -1,10 +1,10 @@
-name: deploy
+name: delivery 
 on:
   push:
     branches:
       - main
 jobs:
-  deploy:
+  delivery:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy with GH-Pages
