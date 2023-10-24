@@ -1,8 +1,9 @@
 name: delivery 
-on:
+on: 
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   delivery:
     runs-on: ubuntu-latest
