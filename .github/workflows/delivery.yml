@@ -7,10 +7,21 @@ jobs:
   delivery:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Clean npm install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
       - name: Deploy with GH-Pages
-        run: |
-          git config user.name "gnidolin" && git config user.email "gnidolin@mail.ru"
-          npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_DIR: ./build
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./build
