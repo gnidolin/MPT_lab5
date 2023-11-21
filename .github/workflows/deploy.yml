@@ -2,8 +2,6 @@ name: Deploy to github pages
  on:
    push:
      branches: [ main ]
-   pull_request:
-     branches: [ main ]
  jobs:
    gh-pages-deploy:
      runs-on: ubuntu-latest
