@@ -6,15 +6,15 @@ jobs:
  gh-pages-deploy:
   runs-on: ubuntu-latest
   steps:
+   - name: Checkout branch
+     uses: actions/checkout@v2
    - name: Setup Node.js for use with actions
      uses: actions/setup-node@v2
      with:
       version: 18
-   - name: Checkout branch
-     uses: actions/checkout@v2
    - name: Clean install dependencies
      run: npm ci
-   - name: Run deploy script
+   - name: Deploy with gh-pages
      run: |
        git config user.name "gnidolin" && git config user.email "gnidolin@mail.ru"
        npm run deploy
