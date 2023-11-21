@@ -16,5 +16,8 @@ jobs:
      run: npm ci
    - name: Run deploy script
      run: |
-      git config user.name "gnidolin" && git config user.email "gnidolin@mail.ru"
-      npm run deploy
+       git config user.name "gnidolin" && git config user.email "gnidolin@mail.ru"
+       npm run deploy
+     env: 
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
