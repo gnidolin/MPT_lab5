@@ -13,14 +13,13 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "/MPT_lab5/",
+  "homepage": "https://gnidolin.github.io/MPT_lab5/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint src/**.js",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
-    "deploy": "gh-pages -d build.",
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
