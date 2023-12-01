@@ -16,8 +16,8 @@ jobs:
      run: npm ci
    - name: Deploy with gh-pages
      env:
-      MY_EMAIL: kevin.hooke@gmail.com
-      MY_NAME: kevinhooke
+      MY_EMAIL: gnidolin@mail.ru
+      MY_NAME: gnidolin
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      run: |
        git config --global user.email $MY_EMAIL
